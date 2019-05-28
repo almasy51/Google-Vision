@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="VisionImage" representedClassName=".VisionImage" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="imageDescriptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="VisionImageDesc" inverseName="imageObject" inverseEntity="VisionImageDesc" syncable="YES"/>
+    </entity>
+    <entity name="VisionImageDesc" representedClassName=".VisionImageDesc" syncable="YES">
+        <attribute name="imageDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="imageObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VisionImage" inverseName="imageDescriptions" inverseEntity="VisionImage" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="VisionImage" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="VisionImageDesc" positionX="-54" positionY="0" width="128" height="75"/>
+    </elements>
+</model>
